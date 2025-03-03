@@ -5,52 +5,6 @@
  *   var Webflow = Webflow || [];
  *   Webflow.push(readyFunction);
  */
-async function handleSubmit(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const formData = new FormData(form);
-
-  const token = await grecaptcha.execute(); // Get reCAPTCHA token
-
-  const data = {
-    category: formData.get("category"),
-    sub_category: formData.get("sub_category"),
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
-    recaptchaToken: token, // Include reCAPTCHA token
-  };
-
-  console.log("Sending Data:", data);
-
-  try {
-    const response = await fetch("https://quicksquad-mail-production.up.railway.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    console.log("Server Response:", result);
-
-    const resultDiv = document.getElementById("result");
-    if (response.ok) {
-      resultDiv.innerHTML = `<p style="color: green;">${result.success}</p>`;
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
-    } else {
-      resultDiv.innerHTML = `<p style="color: red;">${result.error}</p>`;
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    document.getElementById("result").innerHTML = `<p style="color: red;">Failed to send message.</p>`;
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("formSubs").action = "https://quicksquad-mail-production.up.railway.app/send-email";
 });
