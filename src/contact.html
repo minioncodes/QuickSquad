@@ -55,7 +55,6 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            transition: 0.3s;
         }
         #submit-button:disabled {
             background-color: rgba(192, 192, 192, 0.849);
@@ -558,10 +557,10 @@
 <script>
   setInterval(() => {
       if (grecaptcha.getResponse().length > 0) {
-          console.log("✅ CAPTCHA verified, enabling submit button.");
+          console.log("CAPTCHA verified, enabling submit button.");
           document.getElementById("submit-button").disabled = false;
       } else {
-          console.log("❌ CAPTCHA not verified, keeping submit button disabled.");
+          console.log("CAPTCHA not verified, keeping submit button disabled.");
           document.getElementById("submit-button").disabled = true;
       }
   }, 1000);
