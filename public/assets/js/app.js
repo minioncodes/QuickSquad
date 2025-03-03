@@ -5,6 +5,45 @@
  *   var Webflow = Webflow || [];
  *   Webflow.push(readyFunction);
  */
+document.getElementById("email-form").addEventListener("submit", async function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  const data = {
+    category: formData.get("category"),
+    sub_category: formData.get("sub_category"),
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+  };
+
+  try {
+    const response = await fetch("https://quicksquad-mail-production.up.railway.app/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    const resultDiv = document.getElementById("result");
+
+    if (response.ok) {
+      resultDiv.innerHTML = `<p style="color: green;">${result.success}</p>`;
+      setTimeout(() => {
+        window.location.reload(); // Reload the page after 1 second
+      }, 500);
+    } else {
+      resultDiv.innerHTML = `<p style="color: red;">${result.error}</p>`;
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    document.getElementById("result").innerHTML = `<p style="color: red;">Failed to send message.</p>`;
+  }
+});
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("formSubs").action = "https://quicksquad-mail-production.up.railway.app/send-email";
 });
