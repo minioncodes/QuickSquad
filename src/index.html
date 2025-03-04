@@ -759,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (searchText.length > 0) {
             const filteredLinks = links.filter(link => link.name.toLowerCase().includes(searchText));
             dropdown.style.display = "block";
-            dropdown.style.width = "auto"; // Set width auto to accommodate large text
+            dropdown.style.width = "auto";
             
             filteredLinks.forEach(link => {
                 const item = document.createElement("a");
@@ -773,7 +773,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Hide dropdown when clicking outside
     document.addEventListener("click", function (event) {
         if (!searchContainer.contains(event.target)) {
             dropdown.style.display = "none";
