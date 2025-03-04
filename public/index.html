@@ -83,7 +83,6 @@
     position: relative;
 }
 
-/* Initially show the icon, hide the input */
 #search-icon {
     font-size: 20px;
     color: #ffffff;
@@ -97,12 +96,11 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    width: 100px; /* Adjust width */
+    width: 100px;
     background: white;
     transition: width 0.3s ease;
 }
 
-/* When active, hide icon and show input */
 .search-container.active #search-icon {
     display: none;
 }
@@ -125,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
         searchBox.focus();
     });
 
-    // Hide input when clicking outside
     searchBox.addEventListener("blur", function () {
         searchContainer.classList.remove("active");
     });
