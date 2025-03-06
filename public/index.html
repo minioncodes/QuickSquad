@@ -49,19 +49,39 @@
   <link href="/assets/android-chrome-192x192.png" rel="shortcut icon" type="image/x-icon" />
   <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" />
   <style>
-    .search-dropdown {
+.search-dropdown {
     position: absolute;
     top: 100%;
-    border-radius: 10px;
     left: 0;
-    width: 100%;
+    width: max-content; /* Makes sure dropdown fits content */
+    min-width: 200px; /* Minimum width */
+    max-width: 90vw; /* Prevents it from overflowing screen width */
     background: #ffffff;
     border: 1px solid #ccc;
+    border-radius: 10px;
     display: none;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Adds scrolling if dropdown is too long */
+    overflow-y: auto;
 }
 
+@media (max-width: 1366px) {
+    .search-dropdown {
+        left: 0 !important;
+        right: 0 !important;
+        width: auto !important;
+        max-width: 100%; /* Ensure it takes full width if needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .search-dropdown {
+        width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
 .search-dropdown .dropdown-item {
     display: block;
     border-radius: 5px;
