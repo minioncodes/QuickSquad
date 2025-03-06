@@ -102,6 +102,11 @@
     align-items: center;
     position: relative;
 }
+    .search-container-mobile {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
 
 #search-icon {
     font-size: 20px;
@@ -214,17 +219,27 @@ document.addEventListener("DOMContentLoaded", function () {
           </nav>
         </div>
       </div>
+      
       <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
         role="banner" class="navbar w-nav">
+        
         <div class="container-2 w-container"><a href="/" class="brand-3 w-nav-brand">
             <img src="https://quicksquad.live/assets/logo.png" sizes="100vw"
               srcset="https://quicksquad.live/assets/logo.png 500w, https://quicksquad.live/assets/logo.png 600w"
               alt="" />
           </a>
+          
           <div class="menu-bar white w-nav-button" aria-label="menu" role="button" tabindex="0"
             aria-controls="w-nav-overlay-1" aria-haspopup="menu" aria-expanded="false">
             <div class="icon-burger w-icon-nav-menu"></div>
           </div>
+          <div class="search-container-mobile">
+            <a href="#" class="navigation-link w-nav-link" id="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <input type="text" id="search-box" class="search-input" placeholder="Search...">
+        </div>
+          
           <nav role="navigation" class="navigation-menu w-nav-menu">
             <a href="/" class="navigation-link w-nav-link">Home</a>
             <a href="/about" class="navigation-link w-nav-link">About</a>
@@ -249,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </a>
           </div>
           </nav>
+          
         </div>
         <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div>
       </div>
