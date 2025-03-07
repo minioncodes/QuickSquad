@@ -76,12 +76,44 @@
 }
 
 @media (max-width: 768px) {
-    .search-dropdown {
-        width: 100vw !important;
-        left: 0 !important;
-        right: 0 !important;
+    .search-container-mobile {
+        position: absolute;
+        top: 15px; /* Adjust based on navbar height */
+        right: 50px; /* Position near menu icon */
+        z-index: 1001;
+    }
+
+    .search-container-mobile .search-input {
+        display: none;
+        width: 120px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        background: white;
+        position: absolute;
+        top: 30px;
+        right: 0;
+    }
+
+    .search-container-mobile.active .search-input {
+        display: block;
     }
 }
+/* Hide mobile search container on desktops */
+@media (min-width: 769px) {
+    .search-container-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide desktop search container on mobile & tablets */
+@media (max-width: 768px) {
+    .search-container {
+        display: none !important;
+    }
+}
+
 .search-dropdown .dropdown-item {
     display: block;
     border-radius: 5px;
@@ -233,12 +265,12 @@ document.addEventListener("DOMContentLoaded", function () {
             aria-controls="w-nav-overlay-1" aria-haspopup="menu" aria-expanded="false">
             <div class="icon-burger w-icon-nav-menu"></div>
           </div>
-          <!-- <div class="search-container-mobile">
-            <a href="#" class="navigation-link w-nav-link" id="search-icon">
+          <div class="search-container-mobile">
+            <a href="#" id="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </a>
-            <input type="text" id="search-box" class="search-input" placeholder="Search...">
-        </div> -->
+            <input type="text" id="search-box-mobile" class="search-input" placeholder="Search...">
+        </div>
           
           <nav role="navigation" class="navigation-menu w-nav-menu">
             <a href="/" class="navigation-link w-nav-link">Home</a>
@@ -246,12 +278,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/blog" class=" navigation-link w w-nav-link">Blog</a>
             <a href="/contact" class="navigation-link w-nav-link">Contact</a>
             <a href="/Plans" class="navigation-link w-nav-link">Pricing</a>
-              <div class="search-container">
-                <a href="#" class="navigation-link w-nav-link" id="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-                <input type="text" id="search-box" class="search-input" placeholder="Search...">
-            </div>
+            <div class="search-container">
+              <a href="#" class="navigation-link w-nav-link" id="search-icon-desktop">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <input type="text" id="search-box-desktop" class="search-input" placeholder="Search...">
+          </div>
             <div class="social-icons">
               <a href="https://www.facebook.com/profile.php?id=61566916234096" target="_blank" rel="noopener" style="color: black;">
                   <i class="fa-brands fa-facebook-f"></i>
@@ -810,7 +842,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.getElementById("search-icon");
+    const searchContainer = document.querySelector(".search-container-mobile");
+
+    searchIcon.addEventListener("click", function (event) {
+        event.preventDefault();
+        searchContainer.classList.toggle("active");
+    });
+});
+
+const searchIconDesktop = document.getElementById("search-icon-desktop");
+    const searchContainerDesktop = document.querySelector(".search-container");
+
+    if (searchIconDesktop) {
+        searchIconDesktop.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchContainerDesktop.classList.toggle("active");
+        });
+    }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIconMobile = document.getElementById("search-icon-mobile");
+    const searchContainerMobile = document.querySelector(".search-container-mobile");
+
+    searchIconMobile.addEventListener("click", function (event) {
+        event.preventDefault();
+        searchContainerMobile.classList.toggle("active");
+    });
+});
+
   </script>
+  
 </body>
 
 </html>
