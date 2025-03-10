@@ -5,7 +5,105 @@
  *   var Webflow = Webflow || [];
  *   Webflow.push(readyFunction);
  */
+document.addEventListener("DOMContentLoaded", function () {
+  const searchIcon = document.getElementById("search-icon");
+  const searchContainer = document.querySelector(".search-container");
+  const searchBox = document.getElementById("search-box");
 
+  searchIcon.addEventListener("click", function (event) {
+      event.preventDefault();
+      searchContainer.classList.add("active");
+      searchBox.focus();
+  });
+
+  searchBox.addEventListener("blur", function () {
+      searchContainer.classList.remove("active");
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const searchIcons = document.querySelectorAll("#search-icon, #search-icon-desktop, #search-icon-mobile");
+  const searchContainers = document.querySelectorAll(".search-container, .search-container-mobile");
+  const searchBoxes = document.querySelectorAll("#search-box, #search-box-desktop, #search-box-mobile");
+
+  // Create dropdown dynamically
+  searchContainers.forEach(searchContainer => {
+      const dropdown = document.createElement("div");
+      dropdown.classList.add("search-dropdown");
+      searchContainer.appendChild(dropdown);
+  });
+
+  const links = [
+      { name: "Home", url: "/" },
+      { name: "About", url: "/about" },
+      { name: "Blog", url: "/blog" },
+      { name: "Privacy Policy", url: "/privacy-policy" },
+      { name: "Products", url: "/products" },
+      { name: "Services", url: "/services" },
+      { name: "Speed Test", url: "/speedtest" },
+      { name: "Terms of service", url: "/terms-of-service" },
+      { name: "Testimonials", url: "/testimonials" },
+      { name: "How to Fix Slow Internet and Connectivity Issues", url: "/blogs/Slow-Internet-Issues" },
+      { name: "Common Computer Problems & How to Fix Them", url: "/Blogs/Computer-Problem" },
+      { name: "Protecting Your Devices from Viruses & Malware", url: "/Blogs/Protecting-Your-Devices-from-Viruses-&-Malware" },
+      { name: "Remote Tech Support: How It Works & When You Need It", url: "/Blogs/Remote-Tech-Support" },
+      { name: "Best Tips to Optimize Your PC Performance", url: "/Blogs/Best-Tips-to-Optimize-Your-PC-Performance" }
+  ];
+
+  function setupSearch(searchIcon, searchContainer, searchBox) {
+      if (!searchIcon || !searchContainer || !searchBox) return;
+
+      const dropdown = searchContainer.querySelector(".search-dropdown");
+
+      // Show input when clicking the search icon
+      searchIcon.addEventListener("click", function (event) {
+          event.preventDefault();
+          searchContainer.classList.add("active"); // Show input
+          searchBox.focus(); // Auto-focus input
+      });
+
+      // Handle input changes for search
+      searchBox.addEventListener("input", function () {
+          const searchText = searchBox.value.toLowerCase();
+          dropdown.innerHTML = "";
+
+          if (searchText.length > 0) {
+              const filteredLinks = links.filter(link => link.name.toLowerCase().includes(searchText));
+              dropdown.style.display = "block";
+
+              filteredLinks.forEach(link => {
+                  const item = document.createElement("a");
+                  item.href = link.url;
+                  item.textContent = link.name;
+                  item.classList.add("dropdown-item");
+                  dropdown.appendChild(item);
+              });
+          } else {
+              dropdown.style.display = "none";
+          }
+      });
+
+      // Hide search input & dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+          if (!searchContainer.contains(event.target)) {
+              searchContainer.classList.remove("active"); // Hide input
+              dropdown.style.display = "none"; // Hide dropdown
+          }
+      });
+  }
+
+  // Apply search functionality for both desktop & mobile
+  setupSearch(
+      document.getElementById("search-icon-desktop"),
+      document.querySelector(".search-container"),
+      document.getElementById("search-box-desktop")
+  );
+
+  setupSearch(
+      document.getElementById("search-icon-mobile"),
+      document.querySelector(".search-container-mobile"),
+      document.getElementById("search-box-mobile")
+  );
+});
 // Initialize with first 5 categories
 document.addEventListener("DOMContentLoaded", () => {
   initializeCategories(5);
