@@ -16,10 +16,10 @@
 }
 .navigation-menu {
   display: flex;
-  align-items: center; /* Align items in the center vertically */
-  justify-content: space-between; /* Spread items evenly */
-  flex-wrap: nowrap; /* Prevent items from wrapping */
-  gap: 15px; /* Adjust spacing between links */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
 .navigation-menu a {
