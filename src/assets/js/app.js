@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Common Computer Problems & How to Fix Them", url: "/Blogs/Computer-Problem" },
       { name: "Protecting Your Devices from Viruses & Malware", url: "/Blogs/Protecting-Your-Devices-from-Viruses-&-Malware" },
       { name: "Remote Tech Support: How It Works & When You Need It", url: "/Blogs/Remote-Tech-Support" },
-      { name: "Best Tips to Optimize Your PC Performance", url: "/Blogs/Best-Tips-to-Optimize-Your-PC-Performance" }
+      { name: "Best Tips to Optimize Your PC Performance", url: "/Blogs/Best-Tips-to-Optimize-Your-PC-Performance" },
+      { name: "How AI Chatbots Are Revolutionizing Tech Support", url: "/Blogs/AI-Powered" },
   ];
 
   function setupSearch(searchIcon, searchContainer, searchBox) {
