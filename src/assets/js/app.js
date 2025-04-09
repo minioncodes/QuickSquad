@@ -1,25 +1,18 @@
-/*!
- * Webflow: Front-end site library
- * @license MIT
- * Inline scripts may access the api using an async handler:
- *   var Webflow = Webflow || [];
- *   Webflow.push(readyFunction);
- */
 //Subscription captcha code start
-// setInterval(() => {
-//   if (grecaptcha.getResponse().length > 0) {
-//       console.log("CAPTCHA verified, enabling submit button.");
-//       document.getElementById("submit-button-subs").disabled = false;
-//   } else {
-//       console.log("CAPTCHA not verified, keeping submit button disabled.");
-//       document.getElementById("submit-button-subs").disabled = true;
-//   }
-// });
+setInterval(() => {
+  if (grecaptcha.getResponse().length > 0) {
+      console.log("CAPTCHA verified, enabling submit button.");
+      document.getElementById("submit-button-subs").disabled = false;
+  } else {
+      console.log("CAPTCHA not verified, keeping submit button disabled.");
+      document.getElementById("submit-button-subs").disabled = true;
+  }
+});
 
-// function enableSubmit() {
-//   let submitButton = document.getElementById("submit-button-subs");
-//   submitButton.disabled = false; // Enable button
-// }
+function enableSubmit() {
+  let submitButton = document.getElementById("submit-button-subs");
+  submitButton.disabled = false; // Enable button
+}
 
 //Subscription code ended here
 document.addEventListener("DOMContentLoaded", function () {
