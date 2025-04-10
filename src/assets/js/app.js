@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCategories(5);
 });
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("formSubs").action = "aHR0cHM6Ly9xdWlja3NxdWFkLW1haWwtcHJvZHVjdGlvbi51cC5yYWlsd2F5LmFwcC9zZW5kLWVtYWls";
+  document.getElementById("formSubs").action = "aHR0cHM6Ly9xdWlja3NxdWFk"+"LW1haWwtcHJvZHVjdGlvbi51cC5yYWlsd2F5LmFwcC9zZW5kLWVtYWls";
 });
 (() => {
   var c_ = Object.create;
