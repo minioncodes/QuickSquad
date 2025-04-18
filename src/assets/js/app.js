@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Protecting Your Devices from Viruses & Malware", url: "/Blogs/Protecting-Your-Devices-from-Viruses-&-Malware" },
       { name: "Remote Tech Support: How It Works & When You Need It", url: "/Blogs/Remote-Tech-Support" },
       { name: "Best Tips to Optimize Your PC Performance", url: "/Blogs/Best-Tips-to-Optimize-Your-PC-Performance" },
+      { name: "Millennials and Gen Z are digital natives, but their preferences in customer support are surprisingly different. Understanding these differences helps businesses deliver better, tailored experiences.", url: "/Blogs/tech-support" },
       { name: "How AI Chatbots Are Revolutionizing Tech Support", url: "/Blogs/AI-Powered" }
   ];
 
