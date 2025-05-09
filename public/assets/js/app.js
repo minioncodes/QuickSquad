@@ -1,20 +1,3 @@
-//Subscription captcha code start
-// setInterval(() => {
-//   if (grecaptcha.getResponse().length > 0) {
-//       console.log("CAPTCHA verified, enabling submit button.");
-//       document.getElementById("submit-button-subs").disabled = false;
-//   } else {
-//       console.log("CAPTCHA not verified, keeping submit button disabled.");
-//       document.getElementById("submit-button-subs").disabled = true;
-//   }
-// });
-
-// function enableSubmit() {
-//   let submitButton = document.getElementById("submit-button-subs");
-//   submitButton.disabled = false; // Enable button
-// }
-
-//Subscription code ended here
 document.addEventListener("DOMContentLoaded", function () {
   const searchIcon = document.getElementById("search-icon");
   const searchContainer = document.querySelector(".search-container");
