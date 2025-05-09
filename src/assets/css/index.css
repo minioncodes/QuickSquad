@@ -128,7 +128,9 @@
 .search-container-mobile.active #search-icon-mobile {
   display: none;
 }
-
+#search-icon-mobile{
+  color: #ffff;
+}
 .search-container.active .search-input,
 .search-container-mobile.active .search-input {
   display: inline-block;
