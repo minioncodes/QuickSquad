@@ -1,10 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://quicksquad.live/sitemap.xml
-
-Allow: /index
-Allow: /about
-Allow: /plans
-Allow: /contact
-Allow: /faq-page
