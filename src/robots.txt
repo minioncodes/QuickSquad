@@ -1,11 +1,7 @@
-User-agent: Googlebot
+User-agent: *
+Disallow:
+
+User-agent: AhrefsBot
+Allow: /
 
 Sitemap: https://quicksquad.live/sitemap.xml
-
-Allow: /
-Allow: /contact
-Allow: /services
-Allow: /plans
-Allow: /blog
-Allow: /faq-page
-Allow: /privacy-policy
