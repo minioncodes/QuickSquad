@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCategories(5);
 });
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("formSubs").action = "https://quicksquad-mail.up.railway.app/send-email";
+  document.getElementById("formSubs").action = "https://quicksquad-mail.onrender.com/send-email";
 });
 (() => {
   var c_ = Object.create;
