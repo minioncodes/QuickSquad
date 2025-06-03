@@ -5355,10 +5355,12 @@ blockquote {
 
 .faq-tittle {
   display: block;
+  font-weight: bold;
 }
 
 .faq-answer {
   overflow: hidden;
+  padding-left: 20px;
 }
 
 .top-collection {
