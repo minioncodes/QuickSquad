@@ -70,7 +70,14 @@ const blogs = [
     "date": "May 12, 2025",
     "url": "/blogs/Standard_Operating_Procedures",
     "description": "SOPs provide a clear, consistent process for handling support tasks, ensuring quality and efficiency. Regular training keeps support staff updated on tools, protocols, and best practices, improving response times and customer satisfaction."
-  }
+  },
+  {
+  "title": "How Remote Support Works: Behind the Scenes of Fixing Tech Issues",
+  "image": "/assets/remote-support.jpg",
+  "date": "June 9, 2025",
+  "url": "/blogs/How_Remote_Support_Works",
+  "description": "Explore how remote tech support actually works—from secure connections to real-time troubleshooting. Learn what happens behind the scenes when experts fix your devices from anywhere in the world."
+}
 ];
 
 const container = document.getElementById("blog-container");
