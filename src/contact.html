@@ -46,22 +46,37 @@
   <link href="/assets/android-chrome-192x192.png" rel="shortcut icon" type="image/x-icon" />
   <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" />
   <style>
-/* Wrapper to center content */
 .recaptcha-wrapper {
   display: flex;
-  justify-content: center;
-  width: 100%;       /* full width to allow centering */
-  margin: 20px 0;    /* optional spacing */
+  justify-content: center; /* horizontal center */
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10px; /* add some side padding on mobile */
+  box-sizing: border-box;
 }
 
-/* Scale the widget */
 .g-recaptcha {
-  display: inline-block;    /* avoid full width */
-  transform: scale(0.85);
+  display: inline-block;
   transform-origin: center;
   width: 304px;
   height: 78px;
+  /* Default scale for desktop */
+  transform: scale(0.85);
 }
+
+/* Responsive scaling for smaller screens */
+@media (max-width: 480px) {
+  .g-recaptcha {
+    transform: scale(0.8); /* smaller scale for small mobiles */
+  }
+}
+
+@media (max-width: 320px) {
+  .g-recaptcha {
+    transform: scale(0.6); /* even smaller scale for very small mobiles */
+  }
+}
+
 
     #submit-button {
             background-color: #007BFF;
