@@ -11,28 +11,28 @@ const blogs = [
   {
     "title": "Common Computer Problems & How to Fix Them",
     "image": "/assets/2.jpg",
-    "date": "February 10, 2025",
+    "date": "February 14, 2025",
     "url": "/Blogs/Computer-Problem",
     "description": "Facing issues like freezing, crashing, or blue screen errors? Here’s a step-by-step guide to fixing common PC problems on your own."
   },
   {
     "title": "Protecting Your Devices from Viruses & Malware",
     "image": "/assets/3.jpg",
-    "date": "February 10, 2025",
+    "date": "February 18, 2025",
     "url": "/Blogs/Protecting-Your-Devices-from-Viruses-&-Malware",
     "description": "Keep your devices safe from cyber threats! Learn about antivirus, malware removal, and best security practices to stay safe."
   },
   {
     "title": "Remote Tech Support: How It Works & When You Need It",
     "image": "/assets/4.jpg",
-    "date": "February 10, 2025",
+    "date": "February 22, 2025",
     "url": "/Blogs/Remote-Tech-Support",
     "description": "Need tech help but can’t visit a service center? Learn how remote tech support works, its benefits, and when to use it for troubleshooting."
   },
   {
     "title": "Best Tips to Optimize Your PC Performance",
     "image": "/assets/5.jpg",
-    "date": "February 10, 2025",
+    "date": "February 26, 2025",
     "url": "/Blogs/Best-Tips-to-Optimize-Your-PC-Performance",
     "description": "Is your PC running slow? Follow these expert tips to clean up junk files, manage startup programs, and boost system performance easily!"
   },
