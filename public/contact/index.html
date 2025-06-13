@@ -46,6 +46,38 @@
   <link href="/assets/android-chrome-192x192.png" rel="shortcut icon" type="image/x-icon" />
   <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" />
   <style>
+.recaptcha-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10px; /* add some side padding on mobile */
+  box-sizing: border-box;
+}
+
+.g-recaptcha {
+  display: inline-block;
+  transform-origin: center;
+  width: 304px;
+  height: 78px;
+  /* Default scale for desktop */
+  transform: scale(0.85);
+}
+
+/* Responsive scaling for smaller screens */
+@media (max-width: 480px) {
+  .g-recaptcha {
+    transform: scale(0.7); /* smaller scale for small mobiles */
+  }
+}
+
+@media (max-width: 320px) {
+  .g-recaptcha {
+    transform: scale(0.6); /* even smaller scale for very small mobiles */
+  }
+}
+
+
     #submit-button {
             background-color: #007BFF;
             color: white;
@@ -410,7 +442,10 @@
                 placeholder="Enter your name" type="text" id="name-5" required /><input class="field new w-input"
                 maxlength="256" name="email" data-name="Email" placeholder="Enter your email add" type="text"
                 id="name-6" required />
-                <div class="g-recaptcha" data-sitekey="6LeNPuUqAAAAAOLA9Q4l620A_HfT4V5MhdCxxVWX"></div>
+                <div class="recaptcha-wrapper">
+  <div class="g-recaptcha" data-sitekey="6LeNPuUqAAAAAOLA9Q4l620A_HfT4V5MhdCxxVWX"></div>
+</div>
+
                 <input type="submit" id="submit-button-subs" class="button submit-button w-button" value="Submit" disabled>
             </form>
             <div class="success-message w-form-done">
