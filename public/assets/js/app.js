@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "The Most Frequent Questions We Get at Our Help Desk", url: "/Blogs/help-desk-questions" },
       { name: "Millennials and Gen Z are digital natives, but their preferences in customer support are surprisingly different. Understanding these differences helps businesses deliver better, tailored experiences.", url: "/Blogs/tech-support" },
       { name: "How AI Chatbots Are Revolutionizing Tech Support", url: "/Blogs/AI-Powered" },
-      { name: "How Artificial Intelligence Can Improve IT for Businesses", url: "/Blogs/ai-in-it-support" }
+      { name: "How Artificial Intelligence Can Improve IT for Businesses", url: "/Blogs/ai-in-it-support" },
+      { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" }
   ];
 
   function setupSearch(searchIcon, searchContainer, searchBox) {
