@@ -80,7 +80,7 @@ const blogs = [
 },
 {
   "title": "How to Secure Your System During Remote Support Sessions",
-  "image": "/assets/secure-remote-support.jpg",
+  "image": "/assets/secure.jpg",
   "date": "June 18, 2025",
   "url": "/blogs/Secure_Remote_Support_Sessions",
   "description": "Learn how to protect your data, privacy, and devices during remote tech support. From choosing trusted providers to revoking access after the session—discover essential tips to keep your system secure."
