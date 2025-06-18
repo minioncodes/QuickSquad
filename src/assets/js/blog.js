@@ -77,6 +77,13 @@ const blogs = [
   "date": "June 9, 2025",
   "url": "/blogs/How_Remote_Support_Works",
   "description": "Explore how remote tech support actually works—from secure connections to real-time troubleshooting. Learn what happens behind the scenes when experts fix your devices from anywhere in the world."
+},
+{
+  "title": "How to Secure Your System During Remote Support Sessions",
+  "image": "/assets/secure-remote-support.jpg",
+  "date": "June 18, 2025",
+  "url": "/blogs/Secure_Remote_Support_Sessions",
+  "description": "Learn how to protect your data, privacy, and devices during remote tech support. From choosing trusted providers to revoking access after the session—discover essential tips to keep your system secure."
 }
 ];
 
