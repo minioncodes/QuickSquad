@@ -46,7 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Millennials and Gen Z are digital natives, but their preferences in customer support are surprisingly different. Understanding these differences helps businesses deliver better, tailored experiences.", url: "/Blogs/tech-support" },
       { name: "How AI Chatbots Are Revolutionizing Tech Support", url: "/Blogs/AI-Powered" },
       { name: "How Artificial Intelligence Can Improve IT for Businesses", url: "/Blogs/ai-in-it-support" },
-      { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" }
+      { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" },
+      { name: "How Remote Support Works: Behind the Scenes of Fixing Tech Issues", url: "/blogs/How_Remote_Support_Works" },
+      { name: "How Remote Support Works: Behind the Scenes of Fixing Tech Issues", url: "/blogs/How_Remote_Support_Works" }
   ];
 
   function setupSearch(searchIcon, searchContainer, searchBox) {
