@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "How Artificial Intelligence Can Improve IT for Businesses", url: "/Blogs/ai-in-it-support" },
       { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" },
       { name: "How Remote Support Works: Behind the Scenes of Fixing Tech Issues", url: "/blogs/How_Remote_Support_Works" },
-      { name: "How Remote Support Works: Behind the Scenes of Fixing Tech Issues", url: "/blogs/How_Remote_Support_Works" }
+      { name: "How to Secure Your System During Remote Support Sessions", url: "/blogs/Secure_Remote_Support_Sessions" }
   ];
 
   function setupSearch(searchIcon, searchContainer, searchBox) {
