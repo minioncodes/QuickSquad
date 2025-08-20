@@ -46,7 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Millennials and Gen Z are digital natives, but their preferences in customer support are surprisingly different. Understanding these differences helps businesses deliver better, tailored experiences.", url: "/Blogs/tech-support" },
       { name: "How AI Chatbots Are Revolutionizing Tech Support", url: "/Blogs/AI-Powered" },
       { name: "How Artificial Intelligence Can Improve IT for Businesses", url: "/Blogs/ai-in-it-support" },
-      { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" }
+      { name: "Standard Operating Procedures (SOPs) and Training", url: "/Blogs/Standard_Operating_Procedures" },
+      { name: "How Remote Support Works: Behind the Scenes of Fixing Tech Issues", url: "/blogs/How_Remote_Support_Works" },
+      { name: "How to Secure Your System During Remote Support Sessions", url: "/blogs/Secure_Remote_Support_Sessions" }
   ];
 
   function setupSearch(searchIcon, searchContainer, searchBox) {
@@ -109,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCategories(5);
 });
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("formSubs").action = "https://quicksquad-mail.onrender.com/send-email";
+  document.getElementById("formSubs").action = "https://quicksquad-mail.up.railway.app/send-email";
 });
 (() => {
   var c_ = Object.create;
